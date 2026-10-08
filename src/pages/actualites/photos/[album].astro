@@ -1,0 +1,22 @@
+---
+import Page from '@/layouts/Page.astro'
+import albums from '@/data/albums.json'
+import { dateLongue } from '@/lib/format'
+
+export function getStaticPaths() {
+  return albums.map((album) => ({ params: { album: album.slug }, props: { album } }))
+}
+const { album } = Astro.props
+---
+<Page title={album.title} section="actualites" intro={album.date ? dateLongue(album.date) : undefined} image={album.photos[0]} wide>
+  <ul class="columns-2 gap-3 sm:columns-3 lg:columns-4">
+    {album.photos.map((src, i) => (
+      <li class="mb-3 break-inside-avoid">
+        <a href={src} class="block overflow-hidden rounded-xl bg-slate-100">
+          <img src={src} alt={`${album.title} — photo ${i + 1}`} loading="lazy" class="w-full transition hover:opacity-90" />
+        </a>
+      </li>
+    ))}
+  </ul>
+  <p class="mt-8"><a href="/actualites/photos" class="font-semibold text-brand-700">← Tous les albums</a></p>
+</Page>

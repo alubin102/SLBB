@@ -1,0 +1,1402 @@
+{
+  "saison": "2026-2027",
+  "majLe": "2026-10-08T12:51:43.549Z",
+  "source": "https://icbad.ffbad.org/instance/SLB45",
+  "equipes": [
+    {
+      "sigle": "45-SLB-1",
+      "numero": 1,
+      "competition": "Interclubs Nationaux N3 - Championnat de France Interclubs N3 - Poule 4",
+      "niveau": "N3",
+      "poule": "Poule 4",
+      "url": "https://icbad.ffbad.org/equipe/75443",
+      "urlPoule": "https://icbad.ffbad.org/competition/2601159/tableau/18613",
+      "classement": [
+        {
+          "rang": 1,
+          "nom": "Le Volant Des Domes",
+          "sigle": "63-VDD-2",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_VDD63_535.png",
+          "joues": 2,
+          "gagnes": 2,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 14,
+          "matchsDiff": 12,
+          "setsDiff": 21,
+          "pointsDiff": 149
+        },
+        {
+          "rang": 2,
+          "nom": "Sully Les Bordes Badminton",
+          "sigle": "45-SLB-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_SLB45_3693.png",
+          "joues": 2,
+          "gagnes": 2,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 13,
+          "matchsDiff": 10,
+          "setsDiff": 17,
+          "pointsDiff": 119
+        },
+        {
+          "rang": 3,
+          "nom": "Badminton Association Frangy",
+          "sigle": "74-BAF-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_BAF74_1094.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 9,
+          "matchsDiff": 2,
+          "setsDiff": 5,
+          "pointsDiff": 29
+        },
+        {
+          "rang": 4,
+          "nom": "Thonon Badminton Club",
+          "sigle": "74-TBC-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_TBC74_766.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 7,
+          "matchsDiff": -2,
+          "setsDiff": -2,
+          "pointsDiff": -26
+        },
+        {
+          "rang": 5,
+          "nom": "Badminton Club De Bourges",
+          "sigle": "18-BACB-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_BACB18_295.png",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 2,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 4,
+          "matchsDiff": -8,
+          "setsDiff": -15,
+          "pointsDiff": -84
+        },
+        {
+          "rang": 6,
+          "nom": "Chalon-sur-Saône Badminton Club",
+          "sigle": "71-CSBC-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_CSBC71_1362.png",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 2,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 1,
+          "matchsDiff": -14,
+          "setsDiff": -26,
+          "pointsDiff": -187
+        }
+      ],
+      "rencontres": [
+        {
+          "journee": "J01",
+          "date": "2026-09-19T16:00",
+          "lieu": "2 rue du 11 Novembre 1918",
+          "domicile": {
+            "nom": "Chalon-sur-Saône Badminton Club",
+            "sigle": "71-CSBC-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "aDomicile": false,
+          "score": {
+            "domicile": 1,
+            "exterieur": 7
+          },
+          "url": "https://icbad.ffbad.org/rencontre/778179"
+        },
+        {
+          "journee": "J02",
+          "date": "2026-10-03T16:00",
+          "lieu": "Gymnase Elisabeth Torlet, 45460 LES BORDES",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "exterieur": {
+            "nom": "Thonon Badminton Club",
+            "sigle": "74-TBC-1"
+          },
+          "aDomicile": true,
+          "score": {
+            "domicile": 6,
+            "exterieur": 2
+          },
+          "url": "https://icbad.ffbad.org/rencontre/778182"
+        },
+        {
+          "journee": "J03",
+          "date": "2026-11-07T16:00",
+          "lieu": "Rue Louise Michelle",
+          "domicile": {
+            "nom": "Badminton Club De Bourges",
+            "sigle": "18-BACB-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/778185"
+        },
+        {
+          "journee": "J04",
+          "date": "2026-11-28T16:00",
+          "lieu": "267 route de St Julien en Genevois",
+          "domicile": {
+            "nom": "Badminton Association Frangy",
+            "sigle": "74-BAF-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/778188"
+        },
+        {
+          "journee": "J05",
+          "date": "2026-12-19T16:00",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "exterieur": {
+            "nom": "Le Volant Des Domes",
+            "sigle": "63-VDD-2"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/778190"
+        },
+        {
+          "journee": "J06",
+          "date": "2027-01-16T16:00",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "exterieur": {
+            "nom": "Chalon-sur-Saône Badminton Club",
+            "sigle": "71-CSBC-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/778193"
+        },
+        {
+          "journee": "J07",
+          "date": "2027-01-30T13:30",
+          "lieu": "Avenue de la Grangette",
+          "domicile": {
+            "nom": "Thonon Badminton Club",
+            "sigle": "74-TBC-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/778195"
+        },
+        {
+          "journee": "J08",
+          "date": "2027-03-20T16:00",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "exterieur": {
+            "nom": "Badminton Club De Bourges",
+            "sigle": "18-BACB-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/778199"
+        },
+        {
+          "journee": "J09",
+          "date": "2027-04-03T16:00",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "exterieur": {
+            "nom": "Badminton Association Frangy",
+            "sigle": "74-BAF-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/778203"
+        },
+        {
+          "journee": "J10",
+          "date": "2027-04-17T12:30",
+          "lieu": "69 rue du Ressort",
+          "domicile": {
+            "nom": "Le Volant Des Domes",
+            "sigle": "63-VDD-2"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-1"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/778204"
+        }
+      ],
+      "joueurs": [
+        {
+          "nom": "Lucie COUVERT",
+          "sexe": "F",
+          "classements": [
+            "N3",
+            "N3",
+            "N2"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Emeline JAUDOIN",
+          "sexe": "F",
+          "classements": [
+            "R4",
+            "R4",
+            "N2"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Aurore TOUZE",
+          "sexe": "F",
+          "classements": [
+            "N2",
+            "N2",
+            "N2"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Tanguy BLANCHARD",
+          "sexe": "H",
+          "classements": [
+            "N2",
+            "N2",
+            "N3"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Jimmy MAIGNAN",
+          "sexe": "H",
+          "classements": [
+            "N2",
+            "N3",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Rémi PROUVOST",
+          "sexe": "H",
+          "classements": [
+            "N3",
+            "N2",
+            "N2"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Florian SEVIN",
+          "sexe": "H",
+          "classements": [
+            "N1",
+            "N2",
+            "N2"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Dorinda FASCIOTTO",
+          "sexe": "F",
+          "classements": [
+            "R5",
+            "R4",
+            "R4"
+          ],
+          "rencontres": 0
+        },
+        {
+          "nom": "Maryline MOREAU",
+          "sexe": "F",
+          "classements": [
+            "R4",
+            "R4",
+            "R4"
+          ],
+          "rencontres": 0
+        },
+        {
+          "nom": "Cecilia VIALLE",
+          "sexe": "F",
+          "classements": [
+            "R5",
+            "R5",
+            "N3"
+          ],
+          "rencontres": 0
+        },
+        {
+          "nom": "Antonin ALEXANDRE",
+          "sexe": "H",
+          "classements": [
+            "R4",
+            "N3",
+            "R4"
+          ],
+          "rencontres": 0
+        },
+        {
+          "nom": "Dorian QUETTIER",
+          "sexe": "H",
+          "classements": [
+            "N3",
+            "N3",
+            "N3"
+          ],
+          "rencontres": 0
+        }
+      ]
+    },
+    {
+      "sigle": "45-SLB-2",
+      "numero": 2,
+      "competition": "Interclubs Régionaux CVDL R1 - R1 - Régionale 1",
+      "niveau": "R1",
+      "poule": "Régionale 1",
+      "url": "https://icbad.ffbad.org/equipe/75296",
+      "urlPoule": "https://icbad.ffbad.org/competition/2600128/tableau/18582",
+      "classement": [
+        {
+          "rang": 1,
+          "nom": "Association Badminton Salbris",
+          "sigle": "41-ABS-3",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_ABS41_251.jpeg",
+          "joues": 2,
+          "gagnes": 2,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 12,
+          "matchsDiff": 8,
+          "setsDiff": 13,
+          "pointsDiff": 109
+        },
+        {
+          "rang": 2,
+          "nom": "Cercle Laïque des Tourelles Orléans Badminton",
+          "sigle": "45-CLTO-3",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_CLTO45_529.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 1,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 12,
+          "matchsDiff": 8,
+          "setsDiff": 13,
+          "pointsDiff": 55
+        },
+        {
+          "rang": 3,
+          "nom": "Sully Les Bordes Badminton",
+          "sigle": "45-SLB-2",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_SLB45_3693.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 1,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 10,
+          "matchsDiff": 4,
+          "setsDiff": 6,
+          "pointsDiff": 6
+        },
+        {
+          "rang": 4,
+          "nom": "Cercle d'Education Sportive de Tours",
+          "sigle": "37-CEST-3",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_CEST37_519.png",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 1,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 7,
+          "matchsDiff": -2,
+          "setsDiff": -3,
+          "pointsDiff": -44
+        },
+        {
+          "rang": 5,
+          "nom": "Belleville Badminton Club",
+          "sigle": "18-BBC-1",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 1,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 6,
+          "matchsDiff": -4,
+          "setsDiff": -5,
+          "pointsDiff": 13
+        },
+        {
+          "rang": 6,
+          "nom": "SMOC Badminton",
+          "sigle": "45-SMOCBAD-1",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 2,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 1,
+          "matchsDiff": -14,
+          "setsDiff": -24,
+          "pointsDiff": -139
+        }
+      ],
+      "rencontres": [
+        {
+          "journee": "J1-Tr1",
+          "date": "2026-10-04T10:00",
+          "lieu": "[Salbris] CRJS - Gymnase Bernard Pillon, 41300 Salbris",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "Cercle Laïque des Tourelles Orléans Badminton",
+            "sigle": "45-CLTO-3"
+          },
+          "aDomicile": true,
+          "score": {
+            "domicile": 4,
+            "exterieur": 4
+          },
+          "url": "https://icbad.ffbad.org/rencontre/800640"
+        },
+        {
+          "journee": "J1-Tr1",
+          "date": "2026-10-04T13:00",
+          "lieu": "[Salbris] CRJS - Gymnase Bernard Pillon, 41300 Salbris",
+          "domicile": {
+            "nom": "Belleville Badminton Club",
+            "sigle": "18-BBC-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "aDomicile": false,
+          "score": {
+            "domicile": 2,
+            "exterieur": 6
+          },
+          "url": "https://icbad.ffbad.org/rencontre/800643"
+        },
+        {
+          "journee": "J2-Tr1",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "SMOC Badminton",
+            "sigle": "45-SMOCBAD-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/800646"
+        },
+        {
+          "journee": "J2-Tr1",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "Cercle d'Education Sportive de Tours",
+            "sigle": "37-CEST-3"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800649"
+        },
+        {
+          "journee": "J3-Tr1",
+          "date": "2026-11-29T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "Association Badminton Salbris",
+            "sigle": "41-ABS-3"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800653"
+        },
+        {
+          "journee": "J3-Tr1",
+          "date": "2026-11-29T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Cercle Laïque des Tourelles Orléans Badminton",
+            "sigle": "45-CLTO-3"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/800654"
+        },
+        {
+          "journee": "J4-Tr1",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "Belleville Badminton Club",
+            "sigle": "18-BBC-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800659"
+        },
+        {
+          "journee": "J4-Tr1",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "SMOC Badminton",
+            "sigle": "45-SMOCBAD-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800662"
+        },
+        {
+          "journee": "J5-Tr1",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "exterieur": {
+            "nom": "Cercle d'Education Sportive de Tours",
+            "sigle": "37-CEST-3"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800665"
+        },
+        {
+          "journee": "J5-Tr1",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Association Badminton Salbris",
+            "sigle": "41-ABS-3"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-2"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/800666"
+        }
+      ],
+      "joueurs": [
+        {
+          "nom": "Julien CHOQUART",
+          "sexe": "H",
+          "classements": [
+            "R5",
+            "R5",
+            "R4"
+          ],
+          "rencontres": 0
+        },
+        {
+          "nom": "Dorinda FASCIOTTO",
+          "sexe": "F",
+          "classements": [
+            "R5",
+            "R4",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Maryline MOREAU",
+          "sexe": "F",
+          "classements": [
+            "R4",
+            "R4",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Julie THIERCELIN",
+          "sexe": "F",
+          "classements": [
+            "R6",
+            "R6",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Antonin ALEXANDRE",
+          "sexe": "H",
+          "classements": [
+            "R4",
+            "N3",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Lucas MAUDUIT",
+          "sexe": "H",
+          "classements": [
+            "R5",
+            "N3",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Mahe PEYNET",
+          "sexe": "H",
+          "classements": [
+            "N3",
+            "R4",
+            "R5"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Dorian QUETTIER",
+          "sexe": "H",
+          "classements": [
+            "N3",
+            "N3",
+            "N3"
+          ],
+          "rencontres": 2
+        }
+      ]
+    },
+    {
+      "sigle": "45-SLB-3",
+      "numero": 3,
+      "competition": "Interclubs Régionaux CVDL R3 - R3 - Poule B",
+      "niveau": "R3",
+      "poule": "Poule B",
+      "url": "https://icbad.ffbad.org/equipe/75305",
+      "urlPoule": "https://icbad.ffbad.org/competition/2600130/tableau/18584",
+      "classement": [
+        {
+          "rang": 1,
+          "nom": "Sully Les Bordes Badminton",
+          "sigle": "45-SLB-3",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_SLB45_3693.png",
+          "joues": 2,
+          "gagnes": 2,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 11,
+          "matchsDiff": 6,
+          "setsDiff": 9,
+          "pointsDiff": 89
+        },
+        {
+          "rang": 2,
+          "nom": "Badminton La Châtre",
+          "sigle": "36-BLC-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_BLC36_3029.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 9,
+          "matchsDiff": 2,
+          "setsDiff": 2,
+          "pointsDiff": -7
+        },
+        {
+          "rang": 3,
+          "nom": "Badminton Passion Mainvilliers",
+          "sigle": "28-BAPAMA-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_BAPAMA28_307.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 8,
+          "matchsDiff": 0,
+          "setsDiff": 1,
+          "pointsDiff": -27
+        },
+        {
+          "rang": 4,
+          "nom": "union sportive Argentonnaise section Badminton",
+          "sigle": "36-USABAD-4",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_USABAD36_1112.png",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 2,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 4,
+          "matchsDiff": -8,
+          "setsDiff": -12,
+          "pointsDiff": -55
+        },
+        {
+          "rang": 5,
+          "nom": "Cercle d'Education Sportive de Tours",
+          "sigle": "37-CEST-6",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_CEST37_519.png",
+          "joues": 0,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 0,
+          "matchsDiff": 0,
+          "setsDiff": 0,
+          "pointsDiff": 0
+        }
+      ],
+      "rencontres": [
+        {
+          "journee": "J1-Tr1",
+          "date": "2026-10-04T10:00",
+          "lieu": "lothaire kubel, 36200 Argenton sur creuse",
+          "domicile": {
+            "nom": "Badminton Passion Mainvilliers",
+            "sigle": "28-BAPAMA-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "aDomicile": false,
+          "score": {
+            "domicile": 3,
+            "exterieur": 5
+          },
+          "url": "https://icbad.ffbad.org/rencontre/800797"
+        },
+        {
+          "journee": "J1-Tr1",
+          "date": "2026-10-04T13:00",
+          "lieu": "lothaire kubel, 36200 Argenton sur creuse",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "exterieur": {
+            "nom": "union sportive Argentonnaise section Badminton",
+            "sigle": "36-USABAD-4"
+          },
+          "aDomicile": true,
+          "score": {
+            "domicile": 6,
+            "exterieur": 2
+          },
+          "url": "https://icbad.ffbad.org/rencontre/800798"
+        },
+        {
+          "journee": "J2-Tr1",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "exterieur": {
+            "nom": "Cercle d'Education Sportive de Tours",
+            "sigle": "37-CEST-6"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800801"
+        },
+        {
+          "journee": "J2-Tr1",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "union sportive Argentonnaise section Badminton",
+            "sigle": "36-USABAD-4"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/800803"
+        },
+        {
+          "journee": "J4-Tr1",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "exterieur": {
+            "nom": "Badminton Passion Mainvilliers",
+            "sigle": "28-BAPAMA-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800809"
+        },
+        {
+          "journee": "J4-Tr1",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "exterieur": {
+            "nom": "Badminton La Châtre",
+            "sigle": "36-BLC-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800811"
+        },
+        {
+          "journee": "J5-Tr1",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Cercle d'Education Sportive de Tours",
+            "sigle": "37-CEST-6"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/800813"
+        },
+        {
+          "journee": "J5-Tr1",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-3"
+          },
+          "exterieur": {
+            "nom": "Badminton La Châtre",
+            "sigle": "36-BLC-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/800814"
+        }
+      ],
+      "joueurs": [
+        {
+          "nom": "Olivier BARON",
+          "sexe": "H",
+          "classements": [
+            "R6",
+            "R6",
+            "R6"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Marie AUBERT",
+          "sexe": "F",
+          "classements": [
+            "R5",
+            "R6",
+            "R6"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Elodie BERSELLI",
+          "sexe": "F",
+          "classements": [
+            "D8",
+            "D8",
+            "R6"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Keyla BERSELLI",
+          "sexe": "F",
+          "classements": [
+            "R6",
+            "D7",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Lucas BIGNOZET",
+          "sexe": "H",
+          "classements": [
+            "R6",
+            "R6",
+            "D7"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Julien CHOQUART",
+          "sexe": "H",
+          "classements": [
+            "R5",
+            "R5",
+            "R4"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Kévin GASQUEZ",
+          "sexe": "H",
+          "classements": [
+            "R4",
+            "R5",
+            "R6"
+          ],
+          "rencontres": 2
+        }
+      ]
+    },
+    {
+      "sigle": "45-SLB-4",
+      "numero": 4,
+      "competition": "Interclubs Comité 45 D1 - poule-A",
+      "niveau": "D1",
+      "poule": "poule-A",
+      "url": "https://icbad.ffbad.org/equipe/76681",
+      "urlPoule": "https://icbad.ffbad.org/competition/2601619/tableau/19094",
+      "classement": [
+        {
+          "rang": 1,
+          "nom": "HIPPOBAD",
+          "sigle": "45-CBM-1",
+          "joues": 2,
+          "gagnes": 2,
+          "nuls": 0,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 12,
+          "matchsDiff": 8,
+          "setsDiff": 14,
+          "pointsDiff": 119
+        },
+        {
+          "rang": 2,
+          "nom": "Union Sportive Municipale de Montargis",
+          "sigle": "45-USMM-2",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_USMM45_820.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 11,
+          "matchsDiff": 6,
+          "setsDiff": 11,
+          "pointsDiff": 116
+        },
+        {
+          "rang": 3,
+          "nom": "Le Volant Agyle",
+          "sigle": "45-LVA-1",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 1,
+          "perdus": 0,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 9,
+          "matchsDiff": 2,
+          "setsDiff": 4,
+          "pointsDiff": 19
+        },
+        {
+          "rang": 4,
+          "nom": "Sully Les Bordes Badminton",
+          "sigle": "45-SLB-4",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_SLB45_3693.png",
+          "joues": 2,
+          "gagnes": 1,
+          "nuls": 0,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 9,
+          "matchsDiff": 2,
+          "setsDiff": 2,
+          "pointsDiff": 10
+        },
+        {
+          "rang": 5,
+          "nom": "As. A. et S. De Clery Saint Andre",
+          "sigle": "45-AASC-2",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_AASC45_1578.png",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 1,
+          "perdus": 1,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 6,
+          "matchsDiff": -4,
+          "setsDiff": -7,
+          "pointsDiff": -65
+        },
+        {
+          "rang": 6,
+          "nom": "Badminton Club de Chatillon sur Loire Loiret",
+          "sigle": "45-BCCL-1",
+          "logo": "https://poona.ffbad.org/download/logo/logo_instance_BCCL45_3081.jpeg",
+          "joues": 2,
+          "gagnes": 0,
+          "nuls": 0,
+          "perdus": 2,
+          "forfaits": 0,
+          "bonus": 0,
+          "penalites": 0,
+          "points": 1,
+          "matchsDiff": -14,
+          "setsDiff": -24,
+          "pointsDiff": -199
+        }
+      ],
+      "rencontres": [
+        {
+          "journee": "J1",
+          "date": "2026-10-04T09:00",
+          "lieu": "Gymnase Yannick Souvré, 45330 LE MALESHERBOIS",
+          "domicile": {
+            "nom": "As. A. et S. De Clery Saint Andre",
+            "sigle": "45-AASC-2"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "score": {
+            "domicile": 2,
+            "exterieur": 6
+          },
+          "url": "https://icbad.ffbad.org/rencontre/805953"
+        },
+        {
+          "journee": "J2",
+          "date": "2026-10-04T13:00",
+          "lieu": "Gymnase Yannick Souvré, 45330 LE MALESHERBOIS",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "exterieur": {
+            "nom": "HIPPOBAD",
+            "sigle": "45-CBM-1"
+          },
+          "aDomicile": true,
+          "score": {
+            "domicile": 3,
+            "exterieur": 5
+          },
+          "url": "https://icbad.ffbad.org/rencontre/805957"
+        },
+        {
+          "journee": "J3",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Union Sportive Municipale de Montargis",
+            "sigle": "45-USMM-2"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/805960"
+        },
+        {
+          "journee": "J4",
+          "date": "2026-11-08T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Badminton Club de Chatillon sur Loire Loiret",
+            "sigle": "45-BCCL-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/805961"
+        },
+        {
+          "journee": "J5",
+          "date": "2026-11-29T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Le Volant Agyle",
+            "sigle": "45-LVA-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/805964"
+        },
+        {
+          "journee": "J6",
+          "date": "2026-11-29T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "exterieur": {
+            "nom": "As. A. et S. De Clery Saint Andre",
+            "sigle": "45-AASC-2"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/805967"
+        },
+        {
+          "journee": "J7",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "HIPPOBAD",
+            "sigle": "45-CBM-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/805971"
+        },
+        {
+          "journee": "J8",
+          "date": "2027-01-31T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "exterieur": {
+            "nom": "Union Sportive Municipale de Montargis",
+            "sigle": "45-USMM-2"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/805974"
+        },
+        {
+          "journee": "J9",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Badminton Club de Chatillon sur Loire Loiret",
+            "sigle": "45-BCCL-1"
+          },
+          "exterieur": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "aDomicile": false,
+          "url": "https://icbad.ffbad.org/rencontre/805976"
+        },
+        {
+          "journee": "J10",
+          "date": "2027-03-21T00:00",
+          "lieu": "",
+          "domicile": {
+            "nom": "Sully Les Bordes Badminton",
+            "sigle": "45-SLB-4"
+          },
+          "exterieur": {
+            "nom": "Le Volant Agyle",
+            "sigle": "45-LVA-1"
+          },
+          "aDomicile": true,
+          "url": "https://icbad.ffbad.org/rencontre/805981"
+        }
+      ],
+      "joueurs": [
+        {
+          "nom": "Anna HAURANT",
+          "sexe": "F",
+          "classements": [
+            "D8",
+            "D8",
+            "R6"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Pauline GOURDET",
+          "sexe": "F",
+          "classements": [
+            "D9",
+            "D9",
+            "D8"
+          ],
+          "rencontres": 1
+        },
+        {
+          "nom": "Anne lise PERICAT",
+          "sexe": "F",
+          "classements": [
+            "D8",
+            "D8",
+            "R6"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Cecilia VIALLE",
+          "sexe": "F",
+          "classements": [
+            "R5",
+            "R5",
+            "N3"
+          ],
+          "rencontres": 1
+        },
+        {
+          "nom": "Benjamin CACHON",
+          "sexe": "H",
+          "classements": [
+            "R6",
+            "D8",
+            "D7"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Gauthier DELAGE",
+          "sexe": "H",
+          "classements": [
+            "D7",
+            "D8",
+            "D7"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Romain DELATTRE",
+          "sexe": "H",
+          "classements": [
+            "R6",
+            "D7",
+            "D8"
+          ],
+          "rencontres": 2
+        },
+        {
+          "nom": "Antoine SOULAISCHAMP",
+          "sexe": "H",
+          "classements": [
+            "R4",
+            "R6",
+            "R5"
+          ],
+          "rencontres": 2
+        }
+      ]
+    }
+  ]
+}

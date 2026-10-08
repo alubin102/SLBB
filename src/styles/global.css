@@ -1,0 +1,47 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+  --font-sans: 'Inter Variable', ui-sans-serif, system-ui, sans-serif;
+
+  /* Bleu du logo SLBB */
+  --color-brand-50: #eefaff;
+  --color-brand-100: #d9f3ff;
+  --color-brand-200: #b3e7ff;
+  --color-brand-300: #6dd3fb;
+  --color-brand-400: #24bdf2;
+  --color-brand-500: #00a3de;
+  --color-brand-600: #0083ba;
+  --color-brand-700: #046a96;
+  --color-brand-800: #0a587b;
+  --color-brand-900: #0e4966;
+  --color-brand-950: #082f45;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white font-sans text-slate-900 antialiased;
+  }
+  :focus-visible {
+    @apply outline-2 outline-offset-2 outline-brand-600;
+  }
+}
+
+@utility container-page {
+  @apply mx-auto w-full max-w-6xl px-4 sm:px-6 lg:px-8;
+}
+
+@utility btn-primary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl bg-brand-700 px-5 py-3 text-base font-semibold text-white shadow-sm transition hover:bg-brand-800;
+}
+
+@utility btn-secondary {
+  @apply inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-5 py-3 text-base font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-50;
+}
+
+@utility card {
+  @apply rounded-2xl border border-slate-200 bg-white;
+}

@@ -1,0 +1,9 @@
+---
+import Page from '@/layouts/Page.astro'
+import LinkGrid from '@/components/LinkGrid.astro'
+import { navigation } from '@/data/site'
+const entry = navigation.find((n) => n.href === '/infos-pratiques')!
+---
+<Page title="Infos pratiques" intro="Créneaux, gymnases, réservations : tout ce qu’il faut pour venir jouer." wide>
+  <LinkGrid items={entry.items} />
+</Page>

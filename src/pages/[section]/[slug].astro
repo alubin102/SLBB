@@ -1,0 +1,16 @@
+---
+import ContentPage from '@/components/ContentPage.astro'
+import { pagesLibres } from '@/lib/content'
+
+export async function getStaticPaths() {
+  // les pages de la section « actualites » sont servies par actualites/[slug].astro
+  return (await pagesLibres())
+    .filter((p) => p.data.section !== 'actualites')
+    .map((entry) => {
+      const [section, slug] = entry.id.split('/')
+      return { params: { section, slug }, props: { entry } }
+    })
+}
+const { entry } = Astro.props
+---
+<ContentPage entry={entry} section={entry.data.section} />

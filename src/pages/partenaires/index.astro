@@ -1,0 +1,37 @@
+---
+import Page from '@/layouts/Page.astro'
+import partenaires from '@/data/partenaires.json'
+
+const categories = [...new Set(partenaires.map((p) => p.categorie))]
+const titre = (c: string) => c.replace(/^Nos /, '').replace(/^./, (l) => l.toUpperCase())
+---
+<Page title="Nos partenaires" intro="Merci aux collectivités, entreprises et équipementiers qui nous font confiance." wide>
+  {categories.map((c) => (
+    <section class="mb-14">
+      <h2 class="text-xl font-bold tracking-tight">{titre(c)}</h2>
+      <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {partenaires.filter((p) => p.categorie === c).map((p) => {
+          const Tag = p.site ? 'a' : 'div'
+          return (
+            <li>
+              <Tag href={p.site} class:list={['card flex h-full flex-col items-center gap-3 p-5 text-center', p.site && 'transition hover:border-brand-300 hover:shadow-sm']}>
+                <span class="flex h-24 w-full items-center justify-center">
+                  {p.logo ? <img src={p.logo} alt="" loading="lazy" class="max-h-24 max-w-full object-contain" /> : null}
+                </span>
+                <span class="text-sm font-semibold">{p.name}</span>
+              </Tag>
+            </li>
+          )
+        })}
+      </ul>
+    </section>
+  ))}
+
+  <div class="rounded-2xl bg-slate-950 p-8 text-white sm:flex sm:items-center sm:justify-between sm:gap-8">
+    <div>
+      <h2 class="text-xl font-bold">Soutenir le club</h2>
+      <p class="mt-2 max-w-xl text-slate-300">Un don à une association d’intérêt général ouvre droit à une réduction d’impôt de 60 % du don.</p>
+    </div>
+    <a href="/partenaires/devenir-partenaire" class="mt-5 inline-flex shrink-0 rounded-xl bg-white px-5 py-3 font-semibold text-slate-950 hover:bg-slate-100 sm:mt-0">Devenir partenaire</a>
+  </div>
+</Page>

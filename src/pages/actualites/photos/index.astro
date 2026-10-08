@@ -1,0 +1,20 @@
+---
+import Page from '@/layouts/Page.astro'
+import albums from '@/data/albums.json'
+import { dateLongue } from '@/lib/format'
+---
+<Page title="Photos" section="actualites" intro="Les albums du club." wide>
+  <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {albums.filter((a) => a.photos.length).map((a) => (
+      <li>
+        <a href={`/actualites/photos/${a.slug}`} class="card group block overflow-hidden transition hover:shadow-md">
+          <img src={a.photos[0]} alt="" loading="lazy" class="aspect-[4/3] w-full object-cover transition duration-300 group-hover:scale-105" />
+          <div class="p-5">
+            <h2 class="font-semibold group-hover:text-brand-700">{a.title}</h2>
+            <p class="text-sm text-slate-600">{a.photos.length} photo{a.photos.length > 1 ? 's' : ''}{a.date && ` · ${dateLongue(a.date)}`}</p>
+          </div>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Page>

@@ -1,0 +1,78 @@
+---
+import Icon from './Icon.astro'
+import { club, gymnases } from '@/data/site'
+import { periode } from '@/lib/format'
+
+interface Props { prochain?: { title: string; href: string; start: Date; end?: Date }; equipeUne?: string }
+const { prochain, equipeUne } = Astro.props
+const terrains = gymnases.reduce((n, g) => n + (g.terrains ?? 0), 0)
+
+const chiffres = [
+  { valeur: String(club.licencies.total), label: 'licenciés', detail: `dont ${club.licencies.jeunes} jeunes` },
+  { valeur: String(terrains), label: 'terrains', detail: 'sur 2 gymnases' },
+  { valeur: '3 ★', label: 'École de bad', detail: 'label EFB de la FFBaD' },
+  ...(equipeUne ? [{ valeur: equipeUne, label: 'Équipe 1', detail: 'en interclubs' }] : []),
+]
+---
+<section aria-labelledby="hero-title" class="relative isolate overflow-hidden bg-slate-950">
+  <img
+    src="/hero.jpg"
+    alt="Joueuse du SLBB en plein smash lors d’une rencontre d’interclubs"
+    width="1600"
+    height="1148"
+    fetchpriority="high"
+    class="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_30%]"
+  />
+  <!-- Voile sombre : garantit le contraste du texte quelle que soit la photo -->
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/30"></div>
+  <div aria-hidden="true" class="absolute inset-0 -z-10 bg-slate-950/40 lg:hidden"></div>
+
+  <div class="container-page py-16 sm:py-24 lg:py-32">
+    <div class="max-w-2xl">
+      <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white ring-1 ring-white/20">
+        <span class="h-2 w-2 rounded-full bg-brand-400"></span>
+        Saison {club.saison} · Loiret (45)
+      </p>
+
+      <h1 id="hero-title" class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+        Sully Les Bordes
+        <span class="block text-brand-300">Badminton</span>
+      </h1>
+
+      <p class="mt-6 max-w-xl text-lg leading-8 text-slate-200">
+        Le club de badminton de Sully-sur-Loire et des Bordes. Jeunes, loisirs ou compétiteurs&nbsp;:
+        il y a un créneau pour vous, du lundi au samedi.
+      </p>
+
+      <div class="mt-8 flex flex-col gap-3 sm:flex-row">
+        <a href="/inscription" class="inline-flex items-center justify-center gap-2 rounded-xl bg-brand-400 px-5 py-3 text-base font-semibold text-slate-950 shadow-sm transition hover:bg-brand-300">
+          S’inscrire au club <Icon name="arrow" />
+        </a>
+        <a href="/infos-pratiques/horaires" class="inline-flex items-center justify-center rounded-xl border border-white/30 bg-white/10 px-5 py-3 text-base font-semibold text-white transition hover:border-white/50 hover:bg-white/20">
+          Voir les créneaux
+        </a>
+      </div>
+      <p class="mt-4 text-sm text-slate-300">2 séances découvertes gratuites avant de prendre votre licence.</p>
+
+      {prochain && (
+        <a href={prochain.href} class="mt-8 inline-flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-200 hover:text-white">
+          <span class="rounded-md bg-white px-2 py-1 text-xs font-semibold uppercase tracking-wide text-slate-950">À venir</span>
+          <span><span class="font-semibold text-white">{prochain.title}</span> · {periode(prochain.start, prochain.end)}</span>
+        </a>
+      )}
+    </div>
+  </div>
+
+  <div class="border-t border-white/10 bg-slate-950/70 backdrop-blur">
+    <dl class="container-page grid grid-cols-2 gap-x-6 gap-y-6 py-6 sm:grid-cols-4">
+      {chiffres.map((c) => (
+        <div>
+          <dt class="sr-only">{c.label}</dt>
+          <dd class="text-2xl font-bold tracking-tight text-white sm:text-3xl">{c.valeur}</dd>
+          <dd class="text-sm font-medium text-slate-200">{c.label}</dd>
+          <dd class="text-xs text-slate-400">{c.detail}</dd>
+        </div>
+      ))}
+    </dl>
+  </div>
+</section>

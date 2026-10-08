@@ -1,0 +1,74 @@
+[
+  {
+    "nom": "Bureau",
+    "membres": [
+      {
+        "nom": "Cécilia Vialle",
+        "role": "Coprésidente, Joueuse titulaire",
+        "photo": "/media/membre/6887bb26e00f0_Cecilia.PNG"
+      },
+      {
+        "nom": "Tanguy Blanchard",
+        "role": "Coprésident, Joueur",
+        "photo": "/media/membre/62ffc12ccc8b8_IMG5922.jpeg"
+      },
+      {
+        "nom": "Jean-louis Allanic",
+        "role": "Président, Officiel",
+        "photo": "/media/membre/687152d1c3fe1_DSC04285edited.png"
+      },
+      {
+        "nom": "Olivier Baron",
+        "role": "Vice-Président, Joueur"
+      },
+      {
+        "nom": "Frederic Wolff",
+        "role": "Vice-Président, Éducateur"
+      },
+      {
+        "nom": "Antoine Soulaischamp",
+        "role": "Vice-Président, Officiel",
+        "photo": "/media/membre/6a8e36ba9b393_6a8d932306aa7.png"
+      },
+      {
+        "nom": "Alexandra Chevallier",
+        "role": "Trésorière"
+      },
+      {
+        "nom": "Maryline Moreau",
+        "role": "Secrétaire",
+        "photo": "/media/membre/67cf30a8ccdd4_identity_6703c9f7a80a8.png"
+      },
+      {
+        "nom": "Mathilde Dondossola",
+        "role": "Secrétaire adjointe, Joueuse titulaire",
+        "photo": "/media/membre/67cf30a93ca96_66cdcbc27d00e.jpeg"
+      }
+    ]
+  },
+  {
+    "nom": "Membres Comité Directeur",
+    "membres": [
+      {
+        "nom": "M Poulpy",
+        "role": "Bénévole, Pratiquante",
+        "photo": "/media/membre/64d2999f4c535_mascotte.png"
+      }
+    ]
+  },
+  {
+    "nom": "Entraîneurs",
+    "membres": [
+      {
+        "nom": "Kévin Gasquez",
+        "role": "Salarié, Entraîneur Joueur",
+        "photo": "/media/membre/6887bb47b2ddc_Kvin.jpg"
+      },
+      {
+        "nom": "Dorian Quettier",
+        "role": "Salarié, Entraîneur Joueur",
+        "photo": "/media/membre/68dacdbfaf6aa_DorianQUETTIER.png"
+      }
+    ]
+  }
+]

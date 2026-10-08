@@ -1,0 +1,43 @@
+---
+import { getEntry, render } from 'astro:content'
+import Page from '@/layouts/Page.astro'
+import Prose from '@/components/Prose.astro'
+import Attachments from '@/components/Attachments.astro'
+import Icon from '@/components/Icon.astro'
+import { tarifs } from '@/data/site'
+
+const licence = (await getEntry('pages', 'inscription/licence'))!
+const { Content } = await render(licence)
+---
+<Page title="S’inscrire" intro="Tarifs, formulaires de prise de licence et certificat médical." wide>
+  <section aria-labelledby="tarifs">
+    <h2 id="tarifs" class="text-2xl font-bold tracking-tight">Tarifs <span class="text-base font-medium text-slate-500">saison {tarifs.saison}</span></h2>
+    <ul class="mt-5 grid gap-4 sm:grid-cols-3">
+      {tarifs.licences.map((t) => (
+        <li class="card p-6">
+          <p class="font-semibold">{t.label}</p>
+          <p class="text-sm text-slate-600">{t.detail}</p>
+          <p class="mt-4 text-4xl font-extrabold tracking-tight">{t.prix}&nbsp;€</p>
+        </li>
+      ))}
+    </ul>
+    <div class="mt-6 grid gap-6 lg:grid-cols-3">
+      <div class="card p-6 lg:col-span-2">
+        <h3 class="font-semibold">Compris dans l’adhésion</h3>
+        <ul class="mt-3 space-y-2">
+          {tarifs.inclus.map((i) => <li class="flex gap-3 text-slate-700"><span class="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-500"></span>{i}</li>)}
+        </ul>
+      </div>
+      <div class="rounded-2xl bg-brand-50 p-6">
+        <h3 class="flex items-center gap-2 font-semibold"><Icon name="euro" class="h-5 w-5 text-brand-700" />Aides au paiement</h3>
+        <p class="mt-3 text-slate-700">{tarifs.paiement}</p>
+      </div>
+    </div>
+  </section>
+
+  <section aria-labelledby="licence" class="mt-16 max-w-3xl">
+    <h2 id="licence" class="text-2xl font-bold tracking-tight">Prise de licence</h2>
+    <div class="mt-5"><Prose><Content /></Prose></div>
+    <Attachments documents={licence.data.documents} />
+  </section>
+</Page>

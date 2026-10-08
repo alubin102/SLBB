@@ -1,0 +1,21 @@
+---
+import Page from '@/layouts/Page.astro'
+import EventItem from '@/components/EventItem.astro'
+import { evenements } from '@/lib/content'
+const { aVenir, passes } = await evenements()
+---
+<Page title="Agenda" section="actualites" intro="Tournois, stages, réunions et moments conviviaux du club.">
+  <h2 class="text-xl font-bold tracking-tight">À venir</h2>
+  <div class="mt-2 divide-y divide-slate-100">
+    {aVenir.map((e) => <EventItem href={`/agenda/${e.id}`} title={e.data.title} start={e.data.start} end={e.data.end} lieu={e.data.lieu} />)}
+  </div>
+  {aVenir.length === 0 && <p class="mt-2 text-slate-600">Aucun événement annoncé pour le moment.</p>}
+  <p class="mt-4 text-sm text-slate-600">Les rencontres d’interclubs sont dans <a href="/competition" class="font-semibold text-brand-700 underline">Compétition</a>.</p>
+
+  <details class="mt-12">
+    <summary class="cursor-pointer text-xl font-bold tracking-tight">Événements passés ({passes.length})</summary>
+    <div class="mt-2 divide-y divide-slate-100">
+      {passes.map((e) => <EventItem href={`/agenda/${e.id}`} title={e.data.title} start={e.data.start} end={e.data.end} lieu={e.data.lieu} />)}
+    </div>
+  </details>
+</Page>

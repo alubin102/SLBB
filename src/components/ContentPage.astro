@@ -1,0 +1,16 @@
+---
+import { render } from 'astro:content'
+import Page from '@/layouts/Page.astro'
+import Prose from './Prose.astro'
+import Attachments from './Attachments.astro'
+
+interface Props { entry: any; section?: string; title?: string; intro?: string }
+const { entry, section, title, intro } = Astro.props
+const { Content } = await render(entry)
+---
+<Page title={title ?? entry.data.title} section={section} intro={intro} image={entry.data.image}>
+  <slot name="before" />
+  <Prose><Content /></Prose>
+  <Attachments documents={entry.data.documents} photos={entry.data.photos} videos={entry.data.videos} />
+  <slot />
+</Page>

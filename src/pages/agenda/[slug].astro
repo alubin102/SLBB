@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content'
+import ContentPage from '@/components/ContentPage.astro'
+import Icon from '@/components/Icon.astro'
+import { periode, heure } from '@/lib/format'
+
+export async function getStaticPaths() {
+  return (await getCollection('evenements')).map((entry) => ({ params: { slug: entry.id }, props: { entry } }))
+}
+const { entry } = Astro.props
+const { start, end, lieu, image } = entry.data
+---
+<ContentPage entry={entry} section="actualites">
+  <Fragment slot="before">
+    <ul class="mb-8 space-y-2 rounded-2xl bg-brand-50 p-5">
+      <li class="flex gap-3"><Icon name="calendar" class="h-5 w-5 shrink-0 text-brand-700" /><span class="first-letter:uppercase">{periode(start, end)}, {heure(start)}{end && ` – ${heure(end)}`}</span></li>
+      {lieu && <li class="flex gap-3"><Icon name="pin" class="h-5 w-5 shrink-0 text-brand-700" />{lieu}</li>}
+    </ul>
+    {image && <a href={image}><img src={image} alt={`Affiche : ${entry.data.title}`} class="mb-8 w-full rounded-2xl border border-slate-200" /></a>}
+  </Fragment>
+  <p class="mt-10"><a href="/agenda" class="font-semibold text-brand-700">← Tout l’agenda</a></p>
+</ContentPage>

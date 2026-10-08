@@ -1,0 +1,20 @@
+---
+import Page from '@/layouts/Page.astro'
+import { reservations, club } from '@/data/site'
+---
+<Page title="Réservations" section="infos-pratiques" intro="Créneaux et équipements du club ouverts à la réservation par les adhérents.">
+  <ul class="space-y-4">
+    {reservations.map((r) => (
+      <li class="card p-5">
+        <h2 class="font-semibold">{r.nom}</h2>
+        {r.places && <p class="text-sm text-brand-800">{r.places} places par créneau</p>}
+        {r.regle && <p class="mt-2 text-slate-700">{r.regle}</p>}
+      </li>
+    ))}
+  </ul>
+  <div class="mt-8 rounded-2xl bg-brand-50 p-6">
+    <p class="font-semibold">Pour réserver</p>
+    <p class="mt-1 text-slate-700">Écrivez-nous à <a href={`mailto:${club.email}?subject=Réservation`} class="font-semibold text-brand-700 underline">{club.email}</a> en précisant l’équipement, la date et le créneau souhaités.</p>
+  </div>
+  <p class="mt-6 text-slate-600">Pour le véhicule du club, voir <a href="/infos-pratiques/minibus" class="font-semibold text-brand-700 underline">la réservation du minibus</a>.</p>
+</Page>

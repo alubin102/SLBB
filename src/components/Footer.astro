@@ -1,0 +1,57 @@
+---
+import { club, navigation, reseaux, liensFederaux, gymnases } from '@/data/site'
+import Icon from './Icon.astro'
+---
+<footer class="mt-24 bg-slate-950 text-slate-300">
+  <div class="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+    <div>
+      <img src="/logo-blanc.png" alt={club.nom} width="72" height="72" class="h-18 w-18" />
+      <p class="mt-4 text-sm leading-6 text-slate-400">{club.description}</p>
+      <ul class="mt-5 flex gap-2">
+        {reseaux.map((r) => (
+          <li>
+            <a href={r.url} class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-white/20" aria-label={r.nom}>
+              <Icon name={r.icon} />
+            </a>
+          </li>
+        ))}
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-semibold text-white">Nous trouver</h2>
+      <ul class="mt-4 space-y-4 text-sm">
+        {gymnases.slice(0, 2).map((g) => (
+          <li>
+            <a href={g.maps} class="hover:text-white">
+              <span class="font-medium text-white">{g.nom}</span><br />{g.adresse}, {g.ville}
+            </a>
+          </li>
+        ))}
+        <li><a href={`mailto:${club.email}`} class="hover:text-white">{club.email}</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-semibold text-white">Le site</h2>
+      <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-1">
+        {navigation.map((n) => <li><a href={n.href} class="hover:text-white">{n.label}</a></li>)}
+        <li><a href="/inscription" class="hover:text-white">Inscription</a></li>
+        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+      </ul>
+    </div>
+
+    <div>
+      <h2 class="text-sm font-semibold text-white">Liens utiles</h2>
+      <ul class="mt-4 space-y-2 text-sm">
+        {liensFederaux.map((l) => <li><a href={l.url} class="hover:text-white">{l.nom}</a></li>)}
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10">
+    <div class="container-page flex flex-col gap-2 py-6 text-xs text-slate-400 sm:flex-row sm:justify-between">
+      <p>© {new Date().getFullYear()} {club.nom}</p>
+      <a href="/le-club/mentions-legales" class="hover:text-white">Mentions légales</a>
+    </div>
+  </div>
+</footer>

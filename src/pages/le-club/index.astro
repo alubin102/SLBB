@@ -1,0 +1,9 @@
+---
+import Page from '@/layouts/Page.astro'
+import LinkGrid from '@/components/LinkGrid.astro'
+import { navigation } from '@/data/site'
+const entry = navigation.find((n) => n.href === '/le-club')!
+---
+<Page title="Le club" intro="Né en juin 2022 de la fusion des clubs de Sully-sur-Loire et des Bordes, le SLBB réunit jeunes, loisirs et compétiteurs." wide>
+  <LinkGrid items={entry.items} />
+</Page>

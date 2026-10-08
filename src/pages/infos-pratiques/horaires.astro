@@ -1,0 +1,51 @@
+---
+import { getEntry } from 'astro:content'
+import Page from '@/layouts/Page.astro'
+import Attachments from '@/components/Attachments.astro'
+import Icon from '@/components/Icon.astro'
+import { creneaux, gymnases, jours, club, type Public } from '@/data/site'
+
+const importee = await getEntry('pages', 'infos-pratiques/horaires')
+const gym = (id: string) => gymnases.find((g) => g.id === id)!
+const publics: Public[] = ['Jeunes', 'Adultes', 'Tous']
+const titres: Record<Public, string> = { Jeunes: 'Jeunes', Adultes: 'Adultes', Tous: 'Pour tous' }
+const parJour = (p: Public) =>
+  jours
+    .map((jour) => ({ jour, items: creneaux.filter((c) => c.public === p && c.jour === jour).sort((a, b) => a.debut.localeCompare(b.debut)) }))
+    .filter((j) => j.items.length)
+---
+<Page title="Horaires et créneaux" section="infos-pratiques" intro={`Créneaux de la saison ${club.saison}, sur nos deux gymnases.`} wide>
+  <nav class="flex flex-wrap gap-2" aria-label="Publics">
+    {publics.map((p) => <a href={`#${p.toLowerCase()}`} class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold hover:border-brand-500 hover:text-brand-700">{titres[p]}</a>)}
+  </nav>
+
+  {publics.map((p) => (
+    <section id={p.toLowerCase()} class="mt-12 scroll-mt-24">
+      <h2 class="text-2xl font-bold tracking-tight">{titres[p]}</h2>
+      <div class="mt-5 grid gap-4 md:grid-cols-2">
+        {parJour(p).map(({ jour, items }) => (
+          <div class="card p-5">
+            <h3 class="font-semibold text-brand-800">{jour}</h3>
+            <ul class="mt-3 divide-y divide-slate-100">
+              {items.map((c) => (
+                <li class="flex gap-4 py-3">
+                  <span class="w-28 shrink-0 whitespace-nowrap text-sm font-semibold tabular-nums">{c.debut}<span class="text-slate-400"> – </span>{c.fin}</span>
+                  <span class="min-w-0">
+                    <span class="block font-medium">{c.activite}</span>
+                    {c.precision && <span class="block text-sm text-slate-600">{c.precision}</span>}
+                    <span class="mt-0.5 flex items-center gap-1 text-sm text-slate-600"><Icon name="pin" class="h-4 w-4" />{gym(c.gymnase).court}</span>
+                  </span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    </section>
+  ))}
+
+  <p class="mt-10 text-slate-600">
+    Adresses et itinéraires : <a href="/infos-pratiques/gymnases" class="font-semibold text-brand-700 underline">gymnases et accès</a>.
+  </p>
+  {importee && <Attachments documents={importee.data.documents} />}
+</Page>

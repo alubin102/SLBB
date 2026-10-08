@@ -1,0 +1,21 @@
+---
+import Page from '@/layouts/Page.astro'
+import Icon from '@/components/Icon.astro'
+import { gymnases } from '@/data/site'
+---
+<Page title="Gymnases et accès" section="infos-pratiques" intro="Depuis septembre 2022, les badistes se retrouvent sur deux sites, de part et d’autre de la Loire." wide>
+  <ul class="grid gap-6 lg:grid-cols-3">
+    {gymnases.map((g) => (
+      <li class="card flex flex-col p-6">
+        <h2 class="text-lg font-bold">{g.nom}</h2>
+        <p class="mt-2 flex gap-2 text-slate-700"><Icon name="pin" class="mt-0.5 h-5 w-5 shrink-0 text-brand-700" /><span>{g.adresse}<br />{g.ville}</span></p>
+        {g.terrains && <p class="mt-3 text-sm font-semibold text-brand-800">{g.terrains} terrains</p>}
+        {g.note && <p class="mt-1 text-sm text-slate-600">{g.note}</p>}
+        <a href={g.maps} class="btn-secondary mt-5 self-start text-sm">Itinéraire <Icon name="external" class="h-4 w-4" /></a>
+      </li>
+    ))}
+  </ul>
+  <figure class="mt-12">
+    <a href="/media/kcupload/affiche_lieux-1-.jpg"><img src="/media/kcupload/affiche_lieux-1-.jpg" alt="Plan des deux lieux d’entraînement : gymnase Élisabeth Torlet aux Bordes et gymnase Lionel Jourdain à Sully-sur-Loire" loading="lazy" class="w-full rounded-2xl border border-slate-200" /></a>
+  </figure>
+</Page>

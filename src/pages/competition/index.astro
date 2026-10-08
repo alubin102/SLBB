@@ -1,0 +1,53 @@
+---
+import Page from '@/layouts/Page.astro'
+import MatchRow from '@/components/MatchRow.astro'
+import SectionHeading from '@/components/SectionHeading.astro'
+import Icon from '@/components/Icon.astro'
+import { interclubs, equipes, slugEquipe, positionDe, derniersResultats, prochainesRencontres } from '@/lib/interclubs'
+import { dateLongue } from '@/lib/format'
+
+const resultats = derniersResultats(6)
+const aVenir = prochainesRencontres(6)
+const ordinal = (n: number) => (n === 1 ? '1er' : `${n}e`)
+---
+<Page title="Équipes interclubs" section="competition" intro={`${equipes.length} équipes engagées en ${interclubs.saison}, de la Nationale 3 à la Départementale.`} wide>
+  <ul class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    {equipes.map((e) => {
+      const pos = positionDe(e)!
+      return (
+        <li>
+          <a href={`/competition/${slugEquipe(e)}`} class="card group block h-full p-5 transition hover:border-brand-300 hover:shadow-sm">
+            <p class="flex items-center justify-between">
+              <span class="rounded-md bg-slate-900 px-2 py-1 text-sm font-bold text-white">{e.niveau}</span>
+              <span class="text-sm text-slate-500">{e.poule}</span>
+            </p>
+            <p class="mt-4 text-lg font-bold group-hover:text-brand-700">Équipe {e.numero}</p>
+            <p class="text-sm text-slate-600">{e.sigle}</p>
+            <p class="mt-4 text-3xl font-extrabold tracking-tight">{ordinal(pos.rang)}<span class="text-base font-medium text-slate-500"> / {e.classement.length}</span></p>
+            <p class="text-sm text-slate-600">{pos.points} pts · {pos.joues} rencontre{pos.joues > 1 ? 's' : ''} jouée{pos.joues > 1 ? 's' : ''}</p>
+          </a>
+        </li>
+      )
+    })}
+  </ul>
+
+  <div class="mt-14 grid gap-12 lg:grid-cols-2">
+    <section>
+      <SectionHeading title="Derniers résultats" />
+      <div class="mt-4 divide-y divide-slate-100">
+        {resultats.length ? resultats.map((m) => <MatchRow match={m} sigle={m.equipe.sigle} niveau={m.equipe.niveau} />) : <p class="py-4 text-slate-600">Aucune rencontre jouée pour le moment.</p>}
+      </div>
+    </section>
+    <section>
+      <SectionHeading title="Prochaines rencontres" />
+      <div class="mt-4 divide-y divide-slate-100">
+        {aVenir.length ? aVenir.map((m) => <MatchRow match={m} sigle={m.equipe.sigle} niveau={m.equipe.niveau} />) : <p class="py-4 text-slate-600">La saison est terminée.</p>}
+      </div>
+    </section>
+  </div>
+
+  <p class="mt-12 flex flex-wrap items-center gap-x-2 text-sm text-slate-500">
+    Données <a href={interclubs.source} class="inline-flex items-center gap-1 font-medium text-brand-700 underline">ICBaD (FFBaD) <Icon name="external" class="h-3.5 w-3.5" /></a>
+    · mises à jour le {dateLongue(interclubs.majLe)}
+  </p>
+</Page>

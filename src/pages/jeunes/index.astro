@@ -1,0 +1,9 @@
+---
+import Page from '@/layouts/Page.astro'
+import LinkGrid from '@/components/LinkGrid.astro'
+import { navigation } from '@/data/site'
+const entry = navigation.find((n) => n.href === '/jeunes')!
+---
+<Page title="Jeunes" intro="Une École Française de Badminton labellisée 3 étoiles, de 5 à 17 ans." wide>
+  <LinkGrid items={entry.items} />
+</Page>

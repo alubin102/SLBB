@@ -1,0 +1,16 @@
+---
+import Page from '@/layouts/Page.astro'
+import NewsCard from '@/components/NewsCard.astro'
+import { actualites } from '@/lib/content'
+const news = await actualites()
+---
+<Page title="Actualités" intro="La vie du club, des terrains au Club House." wide>
+  <nav class="mb-8 flex flex-wrap gap-2" aria-label="Rubriques">
+    {[['Agenda', '/agenda'], ['Photos', '/actualites/photos'], ['Vidéos', '/actualites/videos'], ['Revue de presse', '/actualites/revue-de-presse'], ['La Nuit du Bad', '/actualites/la-nuit-du-bad']].map(([l, h]) => (
+      <a href={h} class="rounded-full border border-slate-300 px-4 py-2 text-sm font-semibold hover:border-brand-500 hover:text-brand-700">{l}</a>
+    ))}
+  </nav>
+  <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {news.map((n) => <li><NewsCard href={`/actualites/${n.id}`} title={n.data.title} date={n.data.date} image={n.data.image} /></li>)}
+  </ul>
+</Page>

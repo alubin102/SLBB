@@ -1,0 +1,15 @@
+---
+import ContentPage from '@/components/ContentPage.astro'
+import { actualites, pagesDe } from '@/lib/content'
+import { dateLongue } from '@/lib/format'
+
+export async function getStaticPaths() {
+  const news = (await actualites()).map((entry) => ({ params: { slug: entry.id }, props: { entry, date: entry.data.date } }))
+  const pages = (await pagesDe('actualites')).map((entry) => ({ params: { slug: entry.id.split('/')[1] }, props: { entry, date: undefined } }))
+  return [...news, ...pages]
+}
+const { entry, date } = Astro.props
+---
+<ContentPage entry={entry} section="actualites" intro={date && `Publié le ${dateLongue(date)}`}>
+  {entry.data.image && <img slot="before" src={entry.data.image} alt="" class="mb-8 w-full rounded-2xl" />}
+</ContentPage>

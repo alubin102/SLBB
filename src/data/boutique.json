@@ -1,0 +1,99 @@
+[
+  {
+    "nom": "Forza S 5000",
+    "prix": "19.00",
+    "adherents": true,
+    "images": [
+      "/media/produit/662ba3f49fcaa_ForzaS5000.jpg"
+    ],
+    "caracteristiques": {
+      "Nom du tube": "S-5000 vitesse 77 OU équivalent",
+      "Classement fédéral": "Standard",
+      "Grade": "3",
+      "Usage": "Entrainement/Compétition",
+      "Jupe": "Plumes de canards",
+      "Bouchon": "Liège naturel"
+    }
+  },
+  {
+    "nom": "Forza S 6000",
+    "prix": "27.00",
+    "adherents": true,
+    "images": [
+      "/media/produit/662ba39674e54_ForzaS6000.jpg"
+    ],
+    "caracteristiques": {
+      "Nom du tube": "S-6000 vitesse 77",
+      "Classement fédéral": "Élite",
+      "Grade": "2",
+      "Usage": "Compétition",
+      "Jupe": "Plumes d'oies",
+      "Bouchon": "Liège naturel"
+    }
+  },
+  {
+    "nom": "Forza hybride",
+    "prix": "15.00",
+    "adherents": true,
+    "images": [
+      "/media/produit/662ba5e9e1aa0_Forzahybrid.jpg"
+    ],
+    "caracteristiques": {
+      "Nom du tube": "Hybrid 5000 vitesse 77",
+      "Grade": "1",
+      "Usage": "Entrainement",
+      "Jupe": "Hybride",
+      "Bouchon": "Liège composite"
+    }
+  },
+  {
+    "nom": "Tee-shirt Club Adulte",
+    "prix": "30.00",
+    "adherents": false,
+    "images": [
+      "/media/produit/662bd504bf180_tshirtfzcreamw122437988.png"
+    ],
+    "caracteristiques": {}
+  },
+  {
+    "nom": "Tee-shirt Club Enfant",
+    "prix": "25.00",
+    "adherents": false,
+    "images": [
+      "/media/produit/662bd622270ef_tshirtfzcreamw122437988.png"
+    ],
+    "caracteristiques": {}
+  },
+  {
+    "nom": "Sweet zippé Club Adulte",
+    "prix": "35.00",
+    "adherents": true,
+    "images": [
+      "/media/produit/662c15ff8ff35_sweatBadmintonSullylesBordes.png"
+    ],
+    "caracteristiques": {}
+  },
+  {
+    "nom": "Sweet zippé Club Enfant",
+    "prix": "30.00",
+    "adherents": false,
+    "images": [
+      "/media/produit/662c161c83ba3_sweatBadmintonSullylesBordes.png"
+    ],
+    "caracteristiques": {}
+  },
+  {
+    "nom": "t-shirt du club (Tee-shirt FZ FORZA alberti men blanc/marine)",
+    "prix": "35.00",
+    "adherents": true,
+    "images": [
+      "/media/produit/68f7ea9d1f61e_IMG20251021215235.jpeg",
+      "/media/produit/68f7ea9d511d7_IMG20251021215258.jpeg"
+    ],
+    "caracteristiques": {
+      "Nom du vêtement": "Tee-shirt FZ FORZA alberti men blanc/marine",
+      "Vêtement pour": "Hommes et Femmes",
+      "Composition": "100 % polyester recyclé"
+    }
+  }
+]

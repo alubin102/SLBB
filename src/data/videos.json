@@ -1,0 +1,51 @@
+[
+  {
+    "title": "La Popote du SLBB",
+    "src": "/media/video/0e6519e860b539d471c1b10d58d02f4d.mp4",
+    "poster": "/media/albumvideo/0e6519e860b539d471c1b10d58d02f4d.jpg",
+    "album": "La Popote du SLBB",
+    "date": "2025-12-24"
+  },
+  {
+    "title": "Notre mur partenaire",
+    "src": "/media/video/d41486a4660e77d4fc58bd6264b089a0.mp4",
+    "poster": "/media/albumvideo/d41486a4660e77d4fc58bd6264b089a0.jpg",
+    "album": "Partenaires",
+    "date": "2025-07-20"
+  },
+  {
+    "title": "C'est fait",
+    "src": "/media/video/3d8f02ecdae3b658d2b50539f86b44a1.mp4",
+    "poster": "/media/albumvideo/3d8f02ecdae3b658d2b50539f86b44a1.jpg",
+    "album": "La N3 c'est fait !!!!!",
+    "date": "2024-02-16"
+  },
+  {
+    "title": "Echauffement_1",
+    "src": "/media/video/b44133a059ce55005502af211af496a0.mp4",
+    "poster": "/media/albumvideo/b44133a059ce55005502af211af496a0.jpg",
+    "album": "Nuit du bad / échauffement",
+    "date": "2023-03-26"
+  },
+  {
+    "title": "Echauffement 2",
+    "src": "/media/video/53e071d45b9e23e1d0b645d0d6f0f0d8.mp4",
+    "poster": "/media/albumvideo/53e071d45b9e23e1d0b645d0d6f0f0d8.jpg",
+    "album": "Nuit du bad / échauffement",
+    "date": "2023-03-26"
+  },
+  {
+    "title": "Echauffement_1",
+    "src": "/media/video/b42f2423c84312a1e8dd59fb3ccbfd2b.mp4",
+    "poster": "/media/albumvideo/b42f2423c84312a1e8dd59fb3ccbfd2b.jpg",
+    "album": "Nuit du bad / échauffement",
+    "date": "2023-03-26"
+  },
+  {
+    "title": "Aurore",
+    "src": "/media/video/deedbdced0b7178dad2475ca18878602.mp4",
+    "poster": "/media/albumvideo/deedbdced0b7178dad2475ca18878602.jpg",
+    "album": "La jeune Aurore en Pôle Espoirs",
+    "date": "2022-09-17"
+  }
+]

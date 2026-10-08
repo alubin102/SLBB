@@ -1,0 +1,26 @@
+---
+import Page from '@/layouts/Page.astro'
+import groupes from '@/data/bureau.json'
+const initiales = (nom: string) => nom.split(/[\s-]+/).map((p) => p[0]).slice(0, 2).join('').toUpperCase()
+---
+<Page title="Bureau et entraîneurs" section="le-club" intro="Les bénévoles et salariés qui font vivre le club. N’hésitez pas à leur poser vos questions sur les créneaux." wide>
+  {groupes.map((g) => (
+    <section class="mb-12">
+      <h2 class="text-xl font-bold tracking-tight">{g.nom}</h2>
+      <ul class="mt-5 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        {g.membres.map((m) => (
+          <li class="card p-4 text-center">
+            {m.photo
+              ? <img src={m.photo} alt="" loading="lazy" class="mx-auto h-24 w-24 rounded-full object-cover" />
+              : <div class="mx-auto flex h-24 w-24 items-center justify-center rounded-full bg-brand-50 text-2xl font-bold text-brand-700" aria-hidden="true">{initiales(m.nom)}</div>}
+            <p class="mt-3 font-semibold">{m.nom}</p>
+            <p class="text-sm text-slate-600">{m.role}</p>
+          </li>
+        ))}
+      </ul>
+    </section>
+  ))}
+  <p class="text-slate-600">
+    Voir aussi <a href="/le-club/dirigeants" class="font-semibold text-brand-700 underline">l’organigramme et les commissions</a>.
+  </p>
+</Page>

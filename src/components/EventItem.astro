@@ -1,0 +1,18 @@
+---
+import { jourMois, periode, heure } from '@/lib/format'
+interface Props { href: string; title: string; start: Date; end?: Date; lieu?: string }
+const { href, title, start, end, lieu } = Astro.props
+const d = jourMois(start)
+---
+<a href={href} class="group flex items-center gap-4 py-4">
+  <span class="flex h-16 w-16 shrink-0 flex-col items-center justify-center rounded-xl bg-brand-50 text-brand-800">
+    <span class="text-xl font-bold leading-none">{d.jour}</span>
+    <span class="mt-0.5 text-xs font-semibold uppercase">{d.mois}</span>
+  </span>
+  <span class="min-w-0">
+    <span class="block font-semibold group-hover:text-brand-700">{title}</span>
+    <span class="block text-sm text-slate-600">
+      {periode(start, end)} · {heure(start)}{lieu && ` · ${lieu}`}
+    </span>
+  </span>
+</a>

@@ -1,0 +1,41 @@
+---
+import Page from '@/layouts/Page.astro'
+import LinkGrid from '@/components/LinkGrid.astro'
+import produits from '@/data/boutique.json'
+import { club } from '@/data/site'
+---
+<Page title="Boutique du club" section="partenaires" intro="Volants, vêtements et objets aux couleurs du SLBB, réservés aux adhérents." wide>
+  <ul class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    {produits.map((p) => (
+      <li class="card flex flex-col overflow-hidden">
+        <div class="flex aspect-square items-center justify-center bg-slate-50 p-4">
+          {p.images[0] && <img src={p.images[0]} alt={p.nom} loading="lazy" class="max-h-full max-w-full object-contain" />}
+        </div>
+        <div class="flex flex-1 flex-col p-5">
+          <h2 class="font-semibold">{p.nom}</h2>
+          {p.prix && <p class="mt-1 text-2xl font-extrabold tracking-tight">{p.prix.replace('.', ',')}&nbsp;€</p>}
+          {Object.keys(p.caracteristiques).length > 0 && (
+            <dl class="mt-4 space-y-1 text-sm">
+              {Object.entries(p.caracteristiques).map(([k, v]) => (
+                <div class="flex justify-between gap-4"><dt class="text-slate-500">{k}</dt><dd class="text-right font-medium">{v}</dd></div>
+              ))}
+            </dl>
+          )}
+        </div>
+      </li>
+    ))}
+  </ul>
+
+  <div class="mt-10 rounded-2xl bg-brand-50 p-6">
+    <p class="font-semibold">Pour commander</p>
+    <p class="mt-1 text-slate-700">Adressez-vous à un membre du bureau sur les créneaux, ou écrivez à <a href={`mailto:${club.email}?subject=Commande boutique`} class="font-semibold text-brand-700 underline">{club.email}</a>.</p>
+  </div>
+
+  <h2 class="mt-14 text-xl font-bold tracking-tight">Nos équipementiers</h2>
+  <div class="mt-5">
+    <LinkGrid items={[
+      { label: 'Lardesports Orléans', href: '/partenaires/boutique-lardesports', description: 'Magasin spécialiste badminton' },
+      { label: 'Intersport Saint-Père-sur-Loire', href: '/partenaires/boutique-intersport', description: '10 % de remise sur présentation de la licence' },
+    ]} />
+  </div>
+</Page>

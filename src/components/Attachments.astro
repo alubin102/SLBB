@@ -1,0 +1,62 @@
+---
+import Icon from './Icon.astro'
+interface Props {
+  documents?: { title: string; description?: string; file: string }[]
+  photos?: string[]
+  videos?: { title: string; src: string; poster?: string }[]
+}
+const { documents = [], photos = [], videos = [] } = Astro.props
+const ext = (f: string) => f.split('.').pop()?.toUpperCase() ?? ''
+---
+{videos.length > 0 && (
+  <section class="mt-12">
+    <h2 class="text-xl font-bold tracking-tight">Vidéos</h2>
+    <div class="mt-4 grid gap-6 sm:grid-cols-2">
+      {videos.map((v) => (
+        <figure>
+          {/\.mp4$/i.test(v.src) ? (
+            <video controls preload="none" poster={v.poster} class="aspect-video w-full rounded-xl bg-slate-900"><source src={v.src} type="video/mp4" /></video>
+          ) : (
+            <iframe src={v.src} title={v.title} loading="lazy" allowfullscreen class="aspect-video w-full rounded-xl"></iframe>
+          )}
+          <figcaption class="mt-2 text-sm text-slate-600">{v.title}</figcaption>
+        </figure>
+      ))}
+    </div>
+  </section>
+)}
+
+{photos.length > 0 && (
+  <section class="mt-12">
+    <h2 class="text-xl font-bold tracking-tight">Photos</h2>
+    <ul class="mt-4 grid grid-cols-2 gap-2 sm:grid-cols-3">
+      {photos.map((src, i) => (
+        <li>
+          <a href={src} class="block overflow-hidden rounded-xl bg-slate-100">
+            <img src={src} alt={`Photo ${i + 1}`} loading="lazy" class="aspect-[4/3] w-full object-cover transition hover:scale-105" />
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}
+
+{documents.length > 0 && (
+  <section class="mt-12">
+    <h2 class="text-xl font-bold tracking-tight">Documents</h2>
+    <ul class="mt-4 divide-y divide-slate-200 rounded-2xl border border-slate-200">
+      {documents.map((d) => (
+        <li>
+          <a href={d.file} class="flex items-center gap-4 p-4 hover:bg-slate-50">
+            <span class="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-brand-50 text-brand-700"><Icon name="file" /></span>
+            <span class="min-w-0 flex-1">
+              <span class="block font-medium">{d.title}</span>
+              {d.description && <span class="block text-sm text-slate-600">{d.description}</span>}
+            </span>
+            <span class="text-xs font-semibold text-slate-500">{ext(d.file)}</span>
+          </a>
+        </li>
+      ))}
+    </ul>
+  </section>
+)}

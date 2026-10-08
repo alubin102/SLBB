@@ -1,0 +1,27 @@
+---
+import Page from '@/layouts/Page.astro'
+import EventItem from '@/components/EventItem.astro'
+import { evenements } from '@/lib/content'
+
+const { aVenir, passes } = await evenements()
+const tournoi = (e: any) => /tournoi|nuit du bad/i.test(e.data.title) && !/foot/i.test(e.data.title)
+const prochains = aVenir.filter(tournoi)
+const anciens = passes.filter(tournoi)
+---
+<Page title="Tournois du club" section="competition" intro="Nos tournois sont les vitrines de Sully Les Bordes Badminton. Les inscriptions se font sur BadNet.">
+  <h2 class="text-xl font-bold tracking-tight">À venir</h2>
+  <div class="mt-2 divide-y divide-slate-100">
+    {prochains.map((e) => <EventItem href={`/agenda/${e.id}`} title={e.data.title} start={e.data.start} end={e.data.end} lieu={e.data.lieu} />)}
+  </div>
+  {prochains.length === 0 && <p class="mt-2 text-slate-600">Aucun tournoi annoncé pour le moment.</p>}
+
+  {anciens.length > 0 && (
+    <>
+      <h2 class="mt-12 text-xl font-bold tracking-tight">Tournois passés</h2>
+      <div class="mt-2 divide-y divide-slate-100">
+        {anciens.map((e) => <EventItem href={`/agenda/${e.id}`} title={e.data.title} start={e.data.start} end={e.data.end} lieu={e.data.lieu} />)}
+      </div>
+    </>
+  )}
+  <p class="mt-10 text-slate-600">Tournoi déguisé sous lumière noire : découvrez <a href="/actualites/la-nuit-du-bad" class="font-semibold text-brand-700 underline">la Nuit du Bad</a>.</p>
+</Page>
