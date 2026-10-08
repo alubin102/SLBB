@@ -8,7 +8,7 @@ const active = (href: string) => path === href || path.startsWith(href + '/')
   <div class="container-page flex h-16 items-center justify-between gap-4">
     <a href="/" class="flex shrink-0 items-center gap-3" aria-label={`${club.nom} — accueil`}>
       <img src="/logo.png" alt="" width="44" height="44" class="h-11 w-11" />
-      <span class="text-sm font-bold leading-tight tracking-tight sm:text-base">
+      <span class="hidden text-sm font-bold leading-tight tracking-tight min-[22rem]:block sm:text-base">
         Sully Les Bordes<span class="block text-brand-700">Badminton</span>
       </span>
     </a>
@@ -44,28 +44,15 @@ const active = (href: string) => path === href || path.startsWith(href + '/')
       </ul>
     </nav>
 
-    <div class="flex items-center gap-2">
-      <a href="/inscription" class="hidden rounded-lg bg-brand-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-800 sm:inline-flex">
-        S’inscrire
-      </a>
-      <button
-        type="button"
-        id="menu-toggle"
-        class="inline-flex h-11 w-11 items-center justify-center rounded-lg text-slate-700 hover:bg-slate-100 lg:hidden"
-        aria-controls="menu-mobile"
-        aria-expanded="false"
-      >
-        <span class="sr-only">Menu</span>
-        <span data-open><Icon name="menu" class="h-6 w-6" /></span>
-        <span data-close hidden><Icon name="close" class="h-6 w-6" /></span>
-      </button>
-    </div>
+    <a href="/inscription" class="inline-flex min-h-11 items-center rounded-lg bg-brand-700 px-4 py-2 text-sm font-semibold text-white transition hover:bg-brand-800 lg:min-h-0">
+      S’inscrire
+    </a>
   </div>
 
-  <nav id="menu-mobile" hidden class="max-h-[calc(100dvh-4rem)] overflow-y-auto border-t border-slate-200 bg-white lg:hidden" aria-label="Navigation mobile">
-    <div class="container-page py-4">
-      <a href="/inscription" class="btn-primary w-full sm:hidden">S’inscrire</a>
-      <ul class="mt-2 divide-y divide-slate-100">
+  <!-- Plein écran entre l'en-tête et la barre du bas (BottomNav), qui porte le bouton d'ouverture -->
+  <nav id="menu-mobile" hidden class="h-[calc(100dvh-8rem-env(safe-area-inset-bottom))] overflow-y-auto overscroll-contain border-t border-slate-200 bg-white lg:hidden" aria-label="Navigation mobile">
+    <div class="container-page py-2">
+      <ul class="divide-y divide-slate-100">
         {navigation.map((entry) => (
           <li>
             <details class="group" open={active(entry.href)}>
@@ -90,11 +77,16 @@ const active = (href: string) => path === href || path.startsWith(href + '/')
 <script>
   const toggle = document.getElementById('menu-toggle')!
   const menu = document.getElementById('menu-mobile')!
-  toggle.addEventListener('click', () => {
-    const open = menu.hidden
+  const setOpen = (open: boolean) => {
     menu.hidden = !open
     toggle.setAttribute('aria-expanded', String(open))
     toggle.querySelector<HTMLElement>('[data-open]')!.hidden = open
     toggle.querySelector<HTMLElement>('[data-close]')!.hidden = !open
-  })
+    // la page ne défile pas derrière le menu
+    document.documentElement.classList.toggle('overflow-hidden', open)
+  }
+  toggle.addEventListener('click', () => setOpen(menu.hidden))
+  document.addEventListener('keydown', (e) => e.key === 'Escape' && !menu.hidden && setOpen(false))
+  // passage en paysage / tablette large : le menu mobile n'existe plus
+  matchMedia('(min-width: 64rem)').addEventListener('change', (e) => e.matches && setOpen(false))
 </script>

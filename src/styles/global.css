@@ -21,6 +21,9 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    /* les ancres ne passent pas sous l'en-tête fixe */
+    scroll-padding-top: 5rem;
+    -webkit-tap-highlight-color: transparent;
   }
   body {
     @apply bg-white font-sans text-slate-900 antialiased;
@@ -44,4 +47,45 @@
 
 @utility card {
   @apply rounded-2xl border border-slate-200 bg-white;
+}
+
+/* Contenu importé de l'ancien site : tableaux et images y ont des dimensions
+   fixes en pixels (jusqu'à 815px) qui débordaient de l'écran sur mobile. */
+@layer components {
+  .contenu {
+    overflow-wrap: break-word;
+  }
+  .contenu table {
+    display: block;
+    width: auto !important;
+    max-width: 100%;
+    overflow-x: auto;
+  }
+  .contenu :is(td, th, col) {
+    width: auto !important;
+    height: auto !important;
+  }
+  .contenu img {
+    max-width: 100%;
+    height: auto !important;
+  }
+  .contenu :is(iframe, video) {
+    max-width: 100%;
+  }
+  @media (width < 40rem) {
+    /* justifié + colonnes étroites = espaces béants */
+    .contenu :is(td, th, p, span) {
+      text-align: start !important;
+    }
+    /* Tableaux de mise en page de l'ancien site (reconnaissables à leurs
+       attributs HTML, absents des tableaux Markdown) : une cellule par ligne. */
+    .contenu table:is([style], [border], [width]) :is(tbody, tr, td, th) {
+      display: block;
+    }
+    /* habillages et marges fixes (jusqu'à 80px de chaque côté) de l'ancien site */
+    .contenu img {
+      float: none !important;
+      margin-inline: 0 !important;
+    }
+  }
 }

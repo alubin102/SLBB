@@ -15,7 +15,7 @@ const aVenir = e.rencontres.filter((m) => !m.score)
 ---
 <Page title={`Équipe ${e.numero} — ${e.niveau}`} section="competition" intro={e.competition} wide>
   <div class="grid gap-12 lg:grid-cols-5">
-    <div class="space-y-12 lg:col-span-3">
+    <div class="min-w-0 space-y-12 lg:col-span-3">
       <section>
         <h2 class="text-xl font-bold tracking-tight">Classement · {e.poule}</h2>
         <div class="mt-4"><Standings classement={e.classement} sigle={e.sigle} /></div>
@@ -32,7 +32,7 @@ const aVenir = e.rencontres.filter((m) => !m.score)
       </section>
     </div>
 
-    <aside class="lg:col-span-2">
+    <aside class="min-w-0 lg:col-span-2">
       <h2 class="text-xl font-bold tracking-tight">Effectif</h2>
       <ul class="mt-4 divide-y divide-slate-100 rounded-2xl border border-slate-200 px-4">
         {e.joueurs.map((j) => (

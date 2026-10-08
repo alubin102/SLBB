@@ -1,0 +1,33 @@
+---
+// Barre de navigation fixe en bas d'écran (mobile et tablette) : les rubriques
+// les plus consultées sous le pouce, et le bouton qui ouvre le menu complet
+// (#menu-mobile, dans Header.astro).
+import Icon from './Icon.astro'
+const path = Astro.url.pathname
+const liens = [
+  { label: 'Accueil', href: '/', icon: 'home', actif: path === '/' },
+  { label: 'Horaires', href: '/infos-pratiques/horaires', icon: 'clock', actif: path.startsWith('/infos-pratiques') },
+  { label: 'Agenda', href: '/agenda', icon: 'calendar', actif: path.startsWith('/agenda') },
+  { label: 'Interclubs', href: '/competition', icon: 'trophy', actif: path.startsWith('/competition') },
+]
+const item = 'flex h-16 flex-col items-center justify-center gap-1 text-[0.6875rem] font-medium'
+---
+<nav class="fixed inset-x-0 bottom-0 z-50 border-t border-slate-200 bg-white/95 pb-[env(safe-area-inset-bottom)] backdrop-blur lg:hidden" aria-label="Accès rapides">
+  <ul class="mx-auto grid max-w-lg grid-cols-5">
+    {liens.map((l) => (
+      <li>
+        <a href={l.href} aria-current={l.actif ? 'page' : undefined} class:list={[item, l.actif ? 'text-brand-700' : 'text-slate-600']}>
+          <Icon name={l.icon} class="h-6 w-6" />
+          {l.label}
+        </a>
+      </li>
+    ))}
+    <li>
+      <button type="button" id="menu-toggle" class:list={[item, 'w-full text-slate-600 aria-expanded:text-brand-700']} aria-controls="menu-mobile" aria-expanded="false">
+        <span data-open><Icon name="menu" class="h-6 w-6" /></span>
+        <span data-close hidden><Icon name="close" class="h-6 w-6" /></span>
+        Menu
+      </button>
+    </li>
+  </ul>
+</nav>

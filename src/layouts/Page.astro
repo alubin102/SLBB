@@ -7,20 +7,20 @@ const { title, intro, section, description, image, wide = false } = Astro.props
 ---
 <Base title={title} description={description ?? intro} image={image}>
   <div class="border-b border-slate-200 bg-brand-50/60">
-    <div class="container-page py-10 sm:py-14">
+    <div class="container-page py-6 sm:py-14">
       {section && sections[section] && (
-        <nav aria-label="Fil d’Ariane" class="mb-3 text-sm text-slate-600">
+        <nav aria-label="Fil d’Ariane" class="mb-2 text-sm text-slate-600 sm:mb-3">
           <a href="/" class="hover:text-slate-900">Accueil</a>
           <span class="mx-1.5 text-slate-400">/</span>
           <a href={`/${section}`} class="hover:text-slate-900">{sections[section]}</a>
         </nav>
       )}
-      <h1 class="text-3xl font-extrabold tracking-tight sm:text-4xl">{title}</h1>
-      {intro && <p class="mt-3 max-w-2xl text-lg text-slate-600">{intro}</p>}
+      <h1 class="text-2xl font-extrabold tracking-tight text-balance sm:text-4xl">{title}</h1>
+      {intro && <p class="mt-2 max-w-2xl text-base text-slate-600 sm:mt-3 sm:text-lg">{intro}</p>}
       <slot name="header" />
     </div>
   </div>
-  <div class:list={['py-10 sm:py-14', wide ? 'container-page' : 'mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8']}>
+  <div class:list={['py-8 sm:py-14', wide ? 'container-page' : 'mx-auto w-full max-w-3xl px-4 sm:px-6 lg:px-8']}>
     <slot />
   </div>
 </Base>

@@ -27,19 +27,19 @@ const chiffres = [
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/85 to-slate-950/30"></div>
   <div aria-hidden="true" class="absolute inset-0 -z-10 bg-slate-950/40 lg:hidden"></div>
 
-  <div class="container-page py-16 sm:py-24 lg:py-32">
+  <div class="container-page py-10 sm:py-24 lg:py-32">
     <div class="max-w-2xl">
       <p class="inline-flex items-center gap-2 rounded-full bg-white/10 px-3 py-1 text-sm font-medium text-white ring-1 ring-white/20">
         <span class="h-2 w-2 rounded-full bg-brand-400"></span>
         Saison {club.saison} · Loiret (45)
       </p>
 
-      <h1 id="hero-title" class="mt-6 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
+      <h1 id="hero-title" class="mt-5 text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">
         Sully Les Bordes
         <span class="block text-brand-300">Badminton</span>
       </h1>
 
-      <p class="mt-6 max-w-xl text-lg leading-8 text-slate-200">
+      <p class="mt-4 max-w-xl text-base leading-7 text-slate-200 sm:mt-6 sm:text-lg sm:leading-8">
         Le club de badminton de Sully-sur-Loire et des Bordes. Jeunes, loisirs ou compétiteurs&nbsp;:
         il y a un créneau pour vous, du lundi au samedi.
       </p>
@@ -64,7 +64,7 @@ const chiffres = [
   </div>
 
   <div class="border-t border-white/10 bg-slate-950/70 backdrop-blur">
-    <dl class="container-page grid grid-cols-2 gap-x-6 gap-y-6 py-6 sm:grid-cols-4">
+    <dl class="container-page grid grid-cols-2 gap-x-6 gap-y-4 py-5 sm:grid-cols-4 sm:gap-y-6 sm:py-6">
       {chiffres.map((c) => (
         <div>
           <dt class="sr-only">{c.label}</dt>

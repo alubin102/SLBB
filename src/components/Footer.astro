@@ -2,15 +2,15 @@
 import { club, navigation, reseaux, liensFederaux, gymnases } from '@/data/site'
 import Icon from './Icon.astro'
 ---
-<footer class="mt-24 bg-slate-950 text-slate-300">
-  <div class="container-page grid gap-10 py-14 sm:grid-cols-2 lg:grid-cols-4">
+<footer class="mt-14 bg-slate-950 pb-[calc(4rem+env(safe-area-inset-bottom))] text-slate-300 sm:mt-24 lg:pb-0">
+  <div class="container-page grid gap-8 py-10 sm:grid-cols-2 sm:gap-10 sm:py-14 lg:grid-cols-4">
     <div>
       <img src="/logo-blanc.png" alt={club.nom} width="72" height="72" class="h-18 w-18" />
       <p class="mt-4 text-sm leading-6 text-slate-400">{club.description}</p>
       <ul class="mt-5 flex gap-2">
         {reseaux.map((r) => (
           <li>
-            <a href={r.url} class="inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-white/20" aria-label={r.nom}>
+            <a href={r.url} class="inline-flex h-11 w-11 items-center justify-center rounded-lg bg-white/10 text-white hover:bg-white/20" aria-label={r.nom}>
               <Icon name={r.icon} />
             </a>
           </li>
@@ -23,28 +23,28 @@ import Icon from './Icon.astro'
       <ul class="mt-4 space-y-4 text-sm">
         {gymnases.slice(0, 2).map((g) => (
           <li>
-            <a href={g.maps} class="hover:text-white">
+            <a href={g.maps} class="block hover:text-white">
               <span class="font-medium text-white">{g.nom}</span><br />{g.adresse}, {g.ville}
             </a>
           </li>
         ))}
-        <li><a href={`mailto:${club.email}`} class="hover:text-white">{club.email}</a></li>
+        <li><a href={`mailto:${club.email}`} class="block py-1 hover:text-white">{club.email}</a></li>
       </ul>
     </div>
 
     <div>
       <h2 class="text-sm font-semibold text-white">Le site</h2>
-      <ul class="mt-4 grid grid-cols-2 gap-x-4 gap-y-2 text-sm sm:grid-cols-1">
-        {navigation.map((n) => <li><a href={n.href} class="hover:text-white">{n.label}</a></li>)}
-        <li><a href="/inscription" class="hover:text-white">Inscription</a></li>
-        <li><a href="/contact" class="hover:text-white">Contact</a></li>
+      <ul class="mt-2 grid grid-cols-2 gap-x-4 text-sm sm:grid-cols-1">
+        {navigation.map((n) => <li><a href={n.href} class="block py-1.5 hover:text-white">{n.label}</a></li>)}
+        <li><a href="/inscription" class="block py-1.5 hover:text-white">Inscription</a></li>
+        <li><a href="/contact" class="block py-1.5 hover:text-white">Contact</a></li>
       </ul>
     </div>
 
     <div>
       <h2 class="text-sm font-semibold text-white">Liens utiles</h2>
-      <ul class="mt-4 space-y-2 text-sm">
-        {liensFederaux.map((l) => <li><a href={l.url} class="hover:text-white">{l.nom}</a></li>)}
+      <ul class="mt-2 grid grid-cols-2 gap-x-4 text-sm sm:grid-cols-1">
+        {liensFederaux.map((l) => <li><a href={l.url} class="block py-1.5 hover:text-white">{l.nom}</a></li>)}
       </ul>
     </div>
   </div>

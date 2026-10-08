@@ -11,13 +11,13 @@ const libelle = { V: 'Victoire', D: 'Défaite', N: 'Nul' }
 const nom = (e: any) => (e.sigle === sigle ? 'SLBB' : e.nom)
 ---
 <a href={m.url} class="flex items-center gap-3 py-3 text-sm hover:bg-slate-50 sm:gap-4">
-  <span class="w-20 shrink-0 text-slate-600 sm:w-28">
-    <span class="block font-medium text-slate-900">{dateCourte(m.date)}</span>
+  <span class="w-[5.5rem] shrink-0 text-slate-600 sm:w-28">
+    <span class="block whitespace-nowrap font-medium text-slate-900">{dateCourte(m.date)}</span>
     <span class="text-xs">{niveau ? `${niveau} · ` : ''}{m.journee}{!s && !m.date.endsWith('T00:00') && ` · ${heure(m.date)}`}</span>
   </span>
   <span class="min-w-0 flex-1">
-    <span class:list={['block truncate', m.aDomicile && 'font-semibold']}>{nom(m.domicile)}</span>
-    <span class:list={['block truncate', !m.aDomicile && 'font-semibold']}>{nom(m.exterieur)}</span>
+    <span class:list={['block sm:truncate', m.aDomicile && 'font-semibold']}>{nom(m.domicile)}</span>
+    <span class:list={['block sm:truncate', !m.aDomicile && 'font-semibold']}>{nom(m.exterieur)}</span>
   </span>
   {s ? (
     <span class="flex shrink-0 items-center gap-2">
